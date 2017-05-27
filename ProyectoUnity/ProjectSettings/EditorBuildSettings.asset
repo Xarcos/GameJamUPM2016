@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/mainmenu.unity
     guid: 0d6ebb3eec6e27f4fb0c7a86857025c1
   - enabled: 1
+    path: Assets/Scenes/loading.unity
+    guid: 00000000000000000000000000000000
+  - enabled: 1
     path: Assets/Scenes/game.unity
-    guid: a6f40697f6d83854abae0dc0d8c2eb77
+    guid: 1fdd1c0f67e1d354f8405f8e613368cc
   - enabled: 1
     path: Assets/Scenes/endgame.unity
     guid: ea914a6f121f94f428dae199a00c5aa2
@@ -19,4 +22,4 @@ EditorBuildSettings:
     guid: 4d4db7fdd22eb8141b053e569d44934f
   - enabled: 1
     path: Assets/Scenes/leaderboard.unity
-    guid: 00000000000000000000000000000000
+    guid: 09bc9520d7ddbd74b9361b3a1a0f7d88

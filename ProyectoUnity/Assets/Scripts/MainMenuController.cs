@@ -7,7 +7,7 @@ public class MainMenuController : MonoBehaviour {
 
 	public void OnPlay_ButtonClick()
     {
-        SceneManager.LoadScene("game");
+        SceneManager.LoadScene("loading");
     }
 
     public void OnCredits_ButtonClick()
