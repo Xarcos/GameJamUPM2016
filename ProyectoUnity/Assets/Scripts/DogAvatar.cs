@@ -12,15 +12,17 @@ public class DogAvatar : MonoBehaviour
         public int minHp;
     }
 
-    public void loseHp(int loss)
+    public bool loseHp(int loss)
     {
         currentHP = Mathf.Max(0, currentHP - loss);
         if (currentHP == 0)
         {
             GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().EndGame();
-            return;
+            return false;
         }
+
         updateStateSprite();
+        return true;
     }
 
     public void gainHp(int gain)

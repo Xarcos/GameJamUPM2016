@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] DelayedDestroy m_floatingScore;
 
     [SerializeField] float OWNER_REACTION_TIME;
+    [SerializeField] float GAMEOVER_WAIT_TIME;
 
     [SerializeField] Animator redFeedback;
 
@@ -103,7 +104,7 @@ public class GameManager : MonoBehaviour {
         m_avatar = GameObject.FindGameObjectWithTag("Avatar").GetComponent<DogAvatar>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
 
-        MakeGesture();
+        MakeGesture(true);
 	}
 	
 	// Update is called once per frame
@@ -124,12 +125,14 @@ public class GameManager : MonoBehaviour {
             OnActionMade();
     }
 
-    public void MakeGesture()
+    public void MakeGesture(bool newg)
     {
         // Escoger un gesto
-        var values = System.Enum.GetValues(typeof(Actions));
-        m_actualGesture = (Actions)values.GetValue(Random.Range(0, values.Length));
-
+        if (newg)
+        {
+            var values = System.Enum.GetValues(typeof(Actions));
+            m_actualGesture = (Actions)values.GetValue(Random.Range(0, values.Length));
+        }
         // Hacer el gesto
         m_owner.MakeGesture(m_actualGesture);
 
@@ -162,15 +165,9 @@ public class GameManager : MonoBehaviour {
         FollowedSuccesses = 0;
 
         // Perder vida
-        m_avatar.loseHp(m_lvlDefs[actualLvlDef].life_on_fail);
-
-        // Hacer el nuevo gesto
-        if (actualLvlDef != 0)
-            MakeGesture();
-        else
-        {
-            if (OnGestureMade != null)
-                OnGestureMade();
+        if (m_avatar.loseHp(m_lvlDefs[actualLvlDef].life_on_fail)) {
+            // Hacer el nuevo gesto
+            MakeGesture(actualLvlDef != 0);
         }
     }
 
@@ -192,16 +189,16 @@ public class GameManager : MonoBehaviour {
         ++FollowedSuccesses;
 
         // Hacer el nuevo gesto
-        MakeGesture();
+        MakeGesture(true);
     }
 
     public void EndGame()
     {
-        // @TODO
+        player.SetTrigger("death");
 
         ScoreManager.SCORE = Score;
 
-        SceneManager.LoadScene("endgame");
+        StartCoroutine(ExitGame());
     }
 
     void CreateFloatingScore(string text)
@@ -209,5 +206,11 @@ public class GameManager : MonoBehaviour {
         var instantiated = Instantiate<DelayedDestroy>(m_floatingScore);
         instantiated.SetText(text.ToString());
         instantiated.transform.SetParent(m_floatingTransformOrigin, false);
+    }
+
+    IEnumerator ExitGame()
+    {
+        yield return new WaitForSeconds(GAMEOVER_WAIT_TIME);
+        SceneManager.LoadScene("endgame");
     }
 }

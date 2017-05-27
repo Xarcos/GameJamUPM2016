@@ -186,6 +186,7 @@ MonoBehaviour:
   m_floatingScore: {fileID: 114413322902671052, guid: 6f0df7625cb66744fb29b312a37a3051,
     type: 2}
   OWNER_REACTION_TIME: 2
+  GAMEOVER_WAIT_TIME: 5
   redFeedback: {fileID: 1521092425}
 --- !u!4 &37779255
 Transform:
