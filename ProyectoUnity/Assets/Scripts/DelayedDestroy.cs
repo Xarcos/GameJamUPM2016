@@ -9,7 +9,7 @@ public class DelayedDestroy : MonoBehaviour {
 
     public void SetText (string text)
     {
-        GetComponent<UnityEngine.UI.Text>().text = text;
+        GetComponent<UnityEngine.UI.Text>().text = "+" + text;
     }
 
     void Start()
