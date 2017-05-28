@@ -15,6 +15,11 @@ public class MainMenuController : MonoBehaviour {
         SceneManager.LoadScene("credits");
     }
 
+    public void OnBacktoMainMenu_ButtonClick()
+    {
+        SceneManager.LoadScene("mainmenu");
+    }
+
     public void OnLeaderboard_ButtonClick()
     {
         SceneManager.LoadScene("leaderboard");
