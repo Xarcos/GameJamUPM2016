@@ -30,48 +30,30 @@ public class DogAvatar : MonoBehaviour
         currentHP = Mathf.Min(currentHP + gain, MAX_LIFE);
         updateStateSprite();
     }
-    public void setBoost(bool newBoost)
+    public void setBoost(bool active)
     {
-        isBoosted = newBoost;
-        if (isBoosted)
-        {
-            dogAvatar.GetComponent<Animation>().Play();
-        }
-        else {
-            dogAvatar.GetComponent<Animation>().Stop();
-        }
-        
-        updateStateSprite();
+        boostAvatar.enabled = active;
     }
     void updateStateSprite()
     {
-        if (isBoosted)
+        for (int i = 0; i < dogStates.Length; ++i)
         {
-            dogAvatar.sprite = boostAvatar;
-        }
-        else
-        {
-            for (int i = 0; i < dogStates.Length; ++i)
+            if (currentHP < dogStates[i].minHp)
             {
-                if (currentHP < dogStates[i].minHp)
-                {
-                    dogAvatar.sprite = dogStates[i-1].Avatar;
-                    return;
-                }
+                dogAvatar.sprite = dogStates[i-1].Avatar;
+                return;
             }
-
-            dogAvatar.sprite = dogStates[dogStates.Length - 1].Avatar;
         }
+
+        dogAvatar.sprite = dogStates[dogStates.Length - 1].Avatar;
     }
 
     [SerializeField] status[] dogStates;
 
     [SerializeField] Image dogAvatar;
-    [SerializeField] Sprite boostAvatar;
+    [SerializeField] Image boostAvatar;
 
     float currentHP;
-
-    bool isBoosted;
 
     public float MAX_LIFE;
     // Use this for initialization
