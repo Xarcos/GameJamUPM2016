@@ -33,6 +33,14 @@ public class DogAvatar : MonoBehaviour
     public void setBoost(bool newBoost)
     {
         isBoosted = newBoost;
+        if (isBoosted)
+        {
+            dogAvatar.GetComponent<Animation>().Play();
+        }
+        else {
+            dogAvatar.GetComponent<Animation>().Stop();
+        }
+        
         updateStateSprite();
     }
     void updateStateSprite()
