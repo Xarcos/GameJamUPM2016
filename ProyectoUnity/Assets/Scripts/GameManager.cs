@@ -157,6 +157,10 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator OnWrongAction()
     {
+
+        //Resetear temporizador de fallo
+        m_temporizer += m_lvlDefs[actualLvlDef].tempoTime;
+
         // Reacción del dueño
         m_owner.AngryReaction();
         redFeedback.SetTrigger("error");
@@ -170,6 +174,7 @@ public class GameManager : MonoBehaviour {
         if (m_avatar.loseHp(m_lvlDefs[actualLvlDef].life_on_fail)) {
             // Hacer el nuevo gesto
             MakeGesture(actualLvlDef != 0);
+
         }
     }
 
