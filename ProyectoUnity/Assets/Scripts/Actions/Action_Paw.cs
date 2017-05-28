@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Action_Paw : ActionsMono
 {
+    [SerializeField]
+    AudioSource audio;
+
     protected override void MakeAnimation()
     {
         player.SetTrigger("paw");
-
+        audio.Play();
     }
 }
