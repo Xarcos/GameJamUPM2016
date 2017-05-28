@@ -21,7 +21,7 @@ public class EndGameController : MonoBehaviour {
 
     void Update()
     {
-        m_scoreText.text = "Tu puntuación:\n" + ((m_inputField.text == "") ? dogNames[randomNameIndex] : m_inputField.text) + " - "  + score ;
+        m_scoreText.text = "Your Score:\n" + ((m_inputField.text == "") ? dogNames[randomNameIndex] : m_inputField.text) + " - "  + score ;
     }
 
     public void OnContinue_ButtonClick()

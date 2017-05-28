@@ -114,6 +114,7 @@ public class GameManager : MonoBehaviour {
         // Temporizador
         if (tempoOn && (m_temporizer -= Time.deltaTime) < 0)
         {
+            tempoOn = false;
             StartCoroutine(OnWrongAction());
         }
 	}
@@ -157,10 +158,6 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator OnWrongAction()
     {
-
-        //Resetear temporizador de fallo
-        m_temporizer += m_lvlDefs[actualLvlDef].tempoTime;
-
         // Reacción del dueño
         m_owner.AngryReaction();
         redFeedback.SetTrigger("error");
