@@ -12,33 +12,18 @@ MonoBehaviour:
   m_Name: Gestures
   m_EditorClassIdentifier: 
   _handGestures:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: a250a875177adb647b0304fd1beb6fb3, type: 3}
+  - {fileID: 21300000, guid: 5f093b8ec6c49cc4aba9b03d82daddd4, type: 3}
+  - {fileID: 21300000, guid: 1d07be40af2b67e48b0cee75d288f61a, type: 3}
+  - {fileID: 21300000, guid: 453c959c7f22ffb48927906dab83a50c, type: 3}
+  - {fileID: 21300000, guid: e47e41722d58bf842b7e3dfeaf8ec3a0, type: 3}
   _faceGestures:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: d7aa6bd471316a247948e4f71e828daf, type: 3}
+  - {fileID: 21300000, guid: 4f34abcb07007f1408fa27b85a990568, type: 3}
+  - {fileID: 21300000, guid: 3df8ac8686026054fab846922c5d19c9, type: 3}
+  - {fileID: 21300000, guid: 6d68bcacc71daf84190923e7dd30eb04, type: 3}
+  - {fileID: 21300000, guid: 22a0dd4dbfd3cb346b5aa4f49d89222a, type: 3}
   _voiceGestures:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

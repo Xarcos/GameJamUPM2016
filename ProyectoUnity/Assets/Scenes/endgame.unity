@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872734, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -510,7 +510,18 @@ MonoBehaviour:
   m_scoreText: {fileID: 1503025690}
   m_inputField: {fileID: 978835567}
   dogNames:
-  - dog
+  - Snoopy
+  - Niebla
+  - "Mil\xFA"
+  - Pluto
+  - Scooby Doo
+  - "Id\xE9fix"
+  - Ayudante de Santa Claus
+  - Oddie
+  - Nevado
+  - Rex
+  - Akamaru
+  - Lassie
 --- !u!114 &1068098098
 MonoBehaviour:
   m_ObjectHideFlags: 0

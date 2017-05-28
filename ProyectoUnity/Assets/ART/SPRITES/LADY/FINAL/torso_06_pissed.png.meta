@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: d7aa6bd471316a247948e4f71e828daf
-timeCreated: 1495890597
+guid: 29b58aa0c90116c4782eba3207f94813
+timeCreated: 1495935873
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: head_01_0
+  fileIDToRecycleName: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -28,7 +27,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -69,20 +68,7 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: head_01_0
-      rect:
-        serializedVersion: 2
-        x: 376
-        y: 863
-        width: 721
-        height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 

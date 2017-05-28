@@ -18,6 +18,7 @@ public class DogAvatar : MonoBehaviour
         if (currentHP == 0)
         {
             GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().EndGame();
+		updateStateSprite();
             return false;
         }
 
