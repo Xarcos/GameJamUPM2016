@@ -33,7 +33,7 @@ public class DogAvatar : MonoBehaviour
     }
     public void setBoost(bool active)
     {
-        boostAvatar.enabled = active;
+        boostAvatar.SetActive(active);
     }
     void updateStateSprite()
     {
@@ -52,7 +52,7 @@ public class DogAvatar : MonoBehaviour
     [SerializeField] status[] dogStates;
 
     [SerializeField] Image dogAvatar;
-    [SerializeField] Image boostAvatar;
+    [SerializeField] GameObject boostAvatar;
 
     float currentHP;
 
