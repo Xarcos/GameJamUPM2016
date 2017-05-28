@@ -63,11 +63,13 @@ public class GameManager : MonoBehaviour {
             {
                 actualBoost = 0;
                 m_boostText.text = "";
+                m_avatar.setBoost(false);
             }
             else if ((actualLvlDef == m_lvlDefs.Length -1) && (actualBoost < (m_boost.Length - 1)) && (m_boost[actualBoost + 1].followedSuccesses <= followedSuccesses))
             {
                 ++actualBoost;
                 m_boostText.text = "x" + m_boost[actualBoost].multiplier.ToString();
+                m_avatar.setBoost(true);
             }
         }
     }
