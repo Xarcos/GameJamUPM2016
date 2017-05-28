@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour {
         // Temporizador
         if (tempoOn && (m_temporizer -= Time.deltaTime) < 0)
         {
-            OnWrongAction();
+            StartCoroutine(OnWrongAction());
         }
 	}
 
