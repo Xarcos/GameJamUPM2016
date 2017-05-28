@@ -114,6 +114,7 @@ public class GameManager : MonoBehaviour {
         // Temporizador
         if (tempoOn && (m_temporizer -= Time.deltaTime) < 0)
         {
+            tempoOn = false;
             StartCoroutine(OnWrongAction());
         }
 	}
@@ -170,6 +171,7 @@ public class GameManager : MonoBehaviour {
         if (m_avatar.loseHp(m_lvlDefs[actualLvlDef].life_on_fail)) {
             // Hacer el nuevo gesto
             MakeGesture(actualLvlDef != 0);
+
         }
     }
 
