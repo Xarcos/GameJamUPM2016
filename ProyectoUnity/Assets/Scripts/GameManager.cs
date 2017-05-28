@@ -197,6 +197,7 @@ public class GameManager : MonoBehaviour {
     public void EndGame()
     {
         player.SetTrigger("death");
+        GetComponent<AudioSource>().Play();
 
         ScoreManager.SCORE = Score;
 
